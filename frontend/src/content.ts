@@ -272,7 +272,7 @@ export const faq = {
     { q: "Ile trwa wdrożenie?", a: "Starter 1–2 tygodnie, Professional 2–4 tygodnie, Enterprise 4–12 tygodni (w zależności od integracji)." },
     { q: "Czy mogę wyeksportować swoje dane?", a: "Tak — w dowolnym momencie, w formatach CSV/XLSX. Po rozwiązaniu umowy masz 30 dni na pobranie danych." },
     { q: "Gdzie są przechowywane dane?", a: "Wyłącznie na serwerach w Europejskim Obszarze Gospodarczym. Backup co 24h. Umowa DPA zgodna z RODO." },
-    { q: "Czy jest okres próbny?", a: "Tak — 14 dni bezpłatnie, bez karty. Aktywujemy konto po rozmowie kwalifikacyjnej (to chroni przed spamem)." },
+    { q: "Czy jest okres próbny?", a: "Tak — 14 dni bezpłatnie, bez karty. Aktywujemy konto po rozmowie kwalifikacyjnej." },
     { q: "Czy integrujecie się z naszym ERP?", a: "W pakiecie Enterprise — tak. Wycena integracji indywidualna (od 2 000 PLN). Działamy głównie na REST API i CSV." },
   ],
 };
