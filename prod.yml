@@ -13,8 +13,6 @@ services:
       - "traefik.http.routers.cms_cbre.entrypoints=websecure"
       - "traefik.http.routers.cms_cbre.tls=true"
       - "traefik.http.routers.cms_cbre.tls.certresolver=myresolver"
-    ports:
-      - "8083:80"
     networks:
       - default
       - traefik
