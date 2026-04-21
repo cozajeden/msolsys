@@ -1,0 +1,30 @@
+services:
+  cms-nginx:
+    image: msolsys:latest
+    build:
+      context: .
+      dockerfile: Dockerfile
+      target: nginx
+    labels:
+      - "traefik.enable=true"
+      - "traefik.docker.network=traefik"
+      - "traefik.http.routers.cms_cbre.rule=Host(`msolsys.com`) || Host(`www.msolsys.com`)"
+      - "traefik.http.services.cms_cbre.loadbalancer.server.port=443"
+      - "traefik.http.routers.cms_cbre.entrypoints=websecure"
+      - "traefik.http.routers.cms_cbre.tls=true"
+      - "traefik.http.routers.cms_cbre.tls.certresolver=myresolver"
+    ports:
+      - "8083:80"
+    networks:
+      - default
+      - traefik
+    deploy:
+      replicas: 1
+      restart_policy:
+        condition: on-failure
+
+
+networks:
+  traefik:
+    name: traefik
+    external: true

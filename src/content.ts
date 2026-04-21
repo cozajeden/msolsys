@@ -75,7 +75,7 @@ export const hero = {
       { value: "99,9%", label: "uptime 30d" },
       { value: "< 4h", label: "1. reakcja P1" },
       { value: "26", label: "dni do wdrożenia" },
-      { value: "7", label: "modułów w zestawie" },
+      { value: "6", label: "modułów w zestawie" },
     ],
     footer: "PL · EU hosting · RODO",
   },
@@ -208,8 +208,6 @@ export const packages: { sectionNum: string; note: string; headline: string[]; t
       yearlyNote: "lub 35 700 PLN / rok (−15%)",
       bullets: [
         "do 5 lokalizacji · 800 PLN za kolejną",
-        "do 10 użytkowników",
-        "50 ofert / mies.",
         "25 GB danych",
         "SLA Standard 48h / 8h",
         "1 sesja szkoleniowa",
@@ -219,14 +217,12 @@ export const packages: { sectionNum: string; note: string; headline: string[]; t
     {
       name: "Professional",
       subtitle: "Najczęstszy wybór",
-      price: "6 500",
+      price: "8 000",
       priceUnit: "PLN / m-c",
-      yearlyNote: "lub 66 300 PLN / rok (−15%)",
+      yearlyNote: "lub 81 600 PLN / rok (−15%)",
       featured: true,
       bullets: [
         "do 15 lokalizacji · 650 PLN za kolejną",
-        "do 30 użytkowników",
-        "200 ofert / mies.",
         "100 GB + harmonogramy przeglądów",
         "SLA Rozszerzony 24h / 4h",
         "2 sesje + roczna sesja przypominająca",
@@ -236,16 +232,15 @@ export const packages: { sectionNum: string; note: string; headline: string[]; t
     {
       name: "Enterprise",
       subtitle: "Duże kontrakty",
-      price: "od 12 000",
+      price: "od 14 000",
       priceUnit: "",
       yearlyNote: "cena negocjowana",
       bullets: [
-        "bez limitu lokalizacji · 500 PLN za kolejną",
-        "bez limitu użytkowników",
-        "bez limitu ofert · 500 GB+",
+        "do 30 lokalizacji  · 500 PLN za kolejną",
+        "300 GB",
         "custom raporty + eksport API",
-        "SLA Priorytet 8h / 2h + SMS",
-        "integracje ERP · dedykowany opiekun",
+        "SLA Priorytet 8h / 2h",
+        "integracje ERP",
       ],
       ctaLabel: "Umów rozmowę",
     },
@@ -263,9 +258,9 @@ export const team: { sectionNum: string; headline: string[]; lead: string; membe
   lead:
     "Odbierasz telefon — rozmawiasz z osobą, która zna Twój kod aplikacji. Mały zespół to nasza przewaga, nie wada: decyzje zapadają w godzinę, a nie w 40-osobowym łańcuchu maili.",
   members: [
-    { name: "Arkadiusz Matuszak", role: "CEO · Strategia",   blurb: "20+ lat w branży FM. Prowadzi sprzedaż i wdrożenia." },
-    { name: "Radosław Semler",    role: "Software Engineer", blurb: "Projektuje i pisze rdzeń MSS. Odpowiada za jakość kodu." },
-    { name: "Ryszard Napierała",  role: "System Administrator", blurb: "Infrastruktura, backupy, uptime. Pilnuje serwerów 24/7." },
+    { name: "Arkadiusz Matuszak", role: "CEO · Strategia",   blurb: "20+ lat w branży FM. Prowadzi sprzedaż i wdrożenia.", photo: "/assets/arkadiusz.jpg" },
+    { name: "Radosław Semler",    role: "Software Engineer", blurb: "Projektuje i pisze rdzeń MSS. Odpowiada za jakość kodu.", photo: "/assets/radoslaw.jpg" },
+    { name: "Ryszard Napierała",  role: "System Administrator", blurb: "Infrastruktura, backupy, uptime. Pilnuje serwerów 24/7.", photo: "/assets/ryszard.jpg" },
   ],
 };
 
