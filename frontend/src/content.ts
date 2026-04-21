@@ -211,6 +211,7 @@ export const packages: { sectionNum: string; note: string; headline: string[]; t
         "25 GB danych",
         "SLA Standard 48h / 8h",
         "1 sesja szkoleniowa",
+        ""
       ],
       ctaLabel: "Wybierz Starter",
     },
@@ -226,6 +227,7 @@ export const packages: { sectionNum: string; note: string; headline: string[]; t
         "100 GB + harmonogramy przeglądów",
         "SLA Rozszerzony 24h / 4h",
         "2 sesje + roczna sesja przypominająca",
+        ""
       ],
       ctaLabel: "Wybierz Pro",
     },
