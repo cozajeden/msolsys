@@ -1,6 +1,6 @@
 services:
-  msolsys_frontend:
-    image: msolsys:latest
+  msolsys-frontend:
+    image: msolsys_backend:latest
     build:
       context: .
       dockerfile: Dockerfile
@@ -21,11 +21,13 @@ services:
       restart_policy:
         condition: on-failure
       
-  msolsys_backend:
-    container_name: msolsys_backend
+  msolsys-backend:
+    image: msolsys_frontend:latest
     build:
       context: .
       dockerfile: Dockerfile
+      target: backend
+    container_name: msolsys_backend
     env_file:
       - .env
     deploy:
