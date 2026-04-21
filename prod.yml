@@ -1,5 +1,5 @@
 services:
-  msolsys-nginx:
+  msolsys_frontend:
     image: msolsys:latest
     build:
       context: .
@@ -8,14 +8,26 @@ services:
     labels:
       - "traefik.enable=true"
       - "traefik.docker.network=traefik"
-      - "traefik.http.routers.msolsys_cbre.rule=Host(`msolsys.com`) || Host(`www.msolsys.com`)"
-      - "traefik.http.services.msolsys_cbre.loadbalancer.server.port=443"
-      - "traefik.http.routers.msolsys_cbre.entrypoints=websecure"
-      - "traefik.http.routers.msolsys_cbre.tls=true"
-      - "traefik.http.routers.msolsys_cbre.tls.certresolver=myresolver"
+      - "traefik.http.routers.msolsys_frontend.rule=Host(`msolsys.com`) || Host(`www.msolsys.com`)"
+      - "traefik.http.services.msolsys_frontend.loadbalancer.server.port=443"
+      - "traefik.http.routers.msolsys_frontend.entrypoints=websecure"
+      - "traefik.http.routers.msolsys_frontend.tls=true"
+      - "traefik.http.routers.msolsys_frontend.tls.certresolver=myresolver"
     networks:
       - default
       - traefik
+    deploy:
+      replicas: 1
+      restart_policy:
+        condition: on-failure
+      
+  msolsys_backend:
+    container_name: msolsys_backend
+    build:
+      context: .
+      dockerfile: Dockerfile
+    env_file:
+      - .env
     deploy:
       replicas: 1
       restart_policy:
