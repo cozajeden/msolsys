@@ -1,0 +1,84 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* =========================================================================
+   MSS · Brand tokens
+   -------------------------------------------------------------------------
+   ALL colors and fonts live here. To rebrand the whole site, edit these
+   variables — no component touches a raw hex code.
+   ========================================================================= */
+:root {
+  --paper:       #EFECE4;
+  --paper-soft:  #E4E0D4;
+  --paper-line:  #D1CABB;
+  --ink:         #141414;
+  --ink-soft:    #4A4744;
+  --accent:      #4FB0B0;
+  --accent-dark: #2E8A8A;
+
+  --display: "Oswald", ui-sans-serif, system-ui;
+  --body:    "Inter", ui-sans-serif, system-ui;
+}
+
+html, body, #root {
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--body);
+  -webkit-font-smoothing: antialiased;
+}
+
+@layer components {
+  .h-display {
+    @apply font-display font-bold uppercase leading-[0.92] tracking-tight;
+  }
+  .eyebrow {
+    @apply font-display font-medium uppercase tracking-[0.22em] text-[12px];
+  }
+  .micro {
+    @apply font-display font-medium uppercase tracking-[0.18em];
+  }
+  .rule {
+    @apply h-px bg-paper-line;
+  }
+  .paper-card {
+    @apply bg-paper border border-paper-line;
+  }
+  .btn-primary {
+    @apply inline-flex items-center gap-2 font-display font-semibold uppercase tracking-[0.12em]
+           bg-ink text-paper px-[22px] py-[14px] transition-colors duration-150
+           hover:bg-accent hover:text-ink;
+  }
+  .btn-ghost {
+    @apply inline-flex items-center gap-2 font-display font-semibold uppercase tracking-[0.12em]
+           bg-transparent text-ink border border-ink px-[22px] py-[13px]
+           hover:bg-ink hover:text-paper;
+  }
+  .accent-pill {
+    @apply bg-accent text-ink;
+  }
+  .field label {
+    @apply font-display font-medium uppercase tracking-[0.14em] text-[11px] text-ink-soft;
+  }
+  .field input,
+  .field textarea,
+  .field select {
+    @apply w-full bg-transparent border-0 border-b border-paper-line py-[10px]
+           text-[15px] text-ink outline-none font-body transition-colors
+           focus:border-ink;
+  }
+  .field textarea {
+    @apply resize-y min-h-[88px];
+  }
+  .dot { @apply inline-block w-[6px] h-[6px] rounded-full bg-accent; }
+  .industrial-hatch {
+    background-image: linear-gradient(135deg, rgba(20,20,20,0.06) 0 1px, transparent 1px 12px);
+    background-color: var(--paper-soft);
+  }
+}
+
+@keyframes marquee-slide {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}
+.marquee-track { animation: marquee-slide 45s linear infinite; }
