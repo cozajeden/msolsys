@@ -55,7 +55,7 @@ export function Packages() {
               <div className={`rule my-6 ${t.featured ? "!bg-[#2a2a2a]" : ""}`} />
               <ul className={`space-y-2 text-[13px] ${t.featured ? "text-[#d0ccc3]" : "text-ink-soft"}`}>
                 {t.bullets.map((b, i) => (
-                  <li key={i}>· {b}</li>
+                  <li key={i}>{b ? `· ${b}` : "\u00A0"}</li>
                 ))}
               </ul>
               <a
