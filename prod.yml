@@ -1,5 +1,5 @@
 services:
-  cms-nginx:
+  msolsys-nginx:
     image: msolsys:latest
     build:
       context: .
@@ -8,11 +8,11 @@ services:
     labels:
       - "traefik.enable=true"
       - "traefik.docker.network=traefik"
-      - "traefik.http.routers.cms_cbre.rule=Host(`msolsys.com`) || Host(`www.msolsys.com`)"
-      - "traefik.http.services.cms_cbre.loadbalancer.server.port=443"
-      - "traefik.http.routers.cms_cbre.entrypoints=websecure"
-      - "traefik.http.routers.cms_cbre.tls=true"
-      - "traefik.http.routers.cms_cbre.tls.certresolver=myresolver"
+      - "traefik.http.routers.msolsys_cbre.rule=Host(`msolsys.com`) || Host(`www.msolsys.com`)"
+      - "traefik.http.services.msolsys_cbre.loadbalancer.server.port=443"
+      - "traefik.http.routers.msolsys_cbre.entrypoints=websecure"
+      - "traefik.http.routers.msolsys_cbre.tls=true"
+      - "traefik.http.routers.msolsys_cbre.tls.certresolver=myresolver"
     networks:
       - default
       - traefik
