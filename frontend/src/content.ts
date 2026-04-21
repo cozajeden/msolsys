@@ -260,9 +260,9 @@ export const team: { sectionNum: string; headline: string[]; lead: string; membe
   lead:
     "Odbierasz telefon — rozmawiasz z osobą, która zna Twój kod aplikacji. Mały zespół to nasza przewaga, nie wada: decyzje zapadają w godzinę, a nie w 40-osobowym łańcuchu maili.",
   members: [
-    { name: "Arkadiusz Matuszak", role: "CEO · Strategia",   blurb: "20+ lat w branży FM. Prowadzi sprzedaż i wdrożenia.", photo: "/assets/arkadiusz.png" },
-    { name: "Radosław Semler",    role: "Software Engineer", blurb: "Projektuje i pisze rdzeń MSS. Odpowiada za jakość kodu.", photo: "/assets/radoslaw.png" },
-    { name: "Ryszard Napierała",  role: "System Administrator", blurb: "Infrastruktura, backupy, uptime. Pilnuje serwerów 24/7.", photo: "/assets/ryszard.png" },
+    { name: "Arkadiusz Matuszak", role: "CEO · Strategia",   blurb: "20+ lat w branży FM. Prowadzi sprzedaż i wdrożenia.", photo: "/assets/arkadiusz.jpg" },
+    { name: "Radosław Semler",    role: "Software Engineer", blurb: "Projektuje i pisze rdzeń MSS. Odpowiada za jakość kodu.", photo: "/assets/radoslaw.jpg" },
+    { name: "Ryszard Napierała",  role: "System Administrator", blurb: "Infrastruktura, backupy, uptime. Pilnuje serwerów 24/7.", photo: "/assets/ryszard.jpg" },
   ],
 };
 
